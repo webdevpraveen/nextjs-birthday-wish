@@ -1,12 +1,22 @@
 # Happy Birthday Wisher
 
-Check out the [Live Website](https://hbdwish.ml).
+### Check out the [Live Website](https://wdp-birthday-wish.vercel.app/).
+
+Check out old version [Live Website](https://hbdwish.gourav.sh/).
+
+---
 
 This is a simple [Next.js](https://nextjs.org/) project where you can generate a birthday wish for someone.
 
 Just enter their name, press Go and share them the generated link :)
 
 Don't forget to ⭐️ this repository!
+
+---
+
+## New Version Images
+
+
 
 ## Images
 

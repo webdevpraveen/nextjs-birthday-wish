@@ -16,6 +16,8 @@ Don't forget to ⭐️ this repository!
 
 ## New Version Images
 
+![Happy Birthday Wisher Home Page](https://github.com/user-attachments/assets/72ff3fae-a9d2-4a74-b424-6b3a9570209f)
+
 
 
 ## Images

@@ -8,6 +8,7 @@ import { Button } from "../components";
 export default function Home() {
   const { themes, setTheme, currentTheme } = useTheme();
   const [value, setValue] = useState("");
+  const [imageUrl, setImageUrl] = useState(""); //new
 
   const handleInput = (e) => {
     e.preventDefault();
@@ -17,16 +18,23 @@ export default function Home() {
       alert("Please enter a name!");
       return;
     }
-    if (id == 0) Router.push(value);
-    // If the theme is default blue then push to '/{name}'
-    else Router.push(`/${value}/${id}`); // If the theme is not default then will push to '/{name}?color={id}
+
+    const imgParam = imageUrl
+      ? `?img=${encodeURIComponent(imageUrl)}`
+      : "";
+
+    if (id == 0) Router.push(`${value}${imgParam}`);
+    else Router.push(`/${value}/${id}${imgParam}`);
   };
 
   return (
     <div className={styles.container}>
       <Head>
         <title>Create a Birthday Wish</title>
-        <meta name="description" content="An app to generate birthday wishes :)" />
+        <meta
+          name="description"
+          content="An app to generate birthday wishes :)"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -36,8 +44,8 @@ export default function Home() {
             Create a <span className={styles.span}>Birthday</span> Wish
           </h1>
         </div>
-        {/* Theme Color  */}
 
+        {/* Theme Color */}
         <div className={styles.themeWrapper}>
           <form
             className={styles.theme}
@@ -68,8 +76,32 @@ export default function Home() {
               value={value}
               onChange={(e) => setValue(e.target.value)}
             />
+
+            {/* NEW IMAGE URL INPUT */}
+            <input
+              className={styles.input}
+              type="url"
+              placeholder="Image URL (optional)"
+              value={imageUrl}
+              onChange={(e) => setImageUrl(e.target.value)}
+            />
+
             <Button className={styles.button} type="submit" text="Go!" />
           </form>
+
+          {/* helper link */}
+          <p className={styles.desc} style={{ fontSize: "14px" }}>
+            Don’t have an image link?{" "}
+            <a
+              className={styles.span}
+              href="https://postimages.org/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Upload here
+            </a>
+          </p>
+
           <p className={styles.desc}>
             Crafted by{" "}
             <a

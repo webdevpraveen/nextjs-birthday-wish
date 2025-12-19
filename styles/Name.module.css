@@ -170,3 +170,12 @@
   flex-direction: column;
   row-gap: 1em;
 }
+
+/* ---------------------------- */
+
+.birthdayImage {
+  max-width: 200px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 20px;
+}

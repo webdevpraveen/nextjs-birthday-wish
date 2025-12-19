@@ -94,11 +94,11 @@ export default function Home() {
             Don’t have an image link?{" "}
             <a
               className={styles.span}
-              href="https://postimages.org/"
+              href="https://www.image2url.com/"
               target="_blank"
               rel="noreferrer"
             >
-              Upload here
+              Upload here for link
             </a>
           </p>
 
